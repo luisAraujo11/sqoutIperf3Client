@@ -1,0 +1,35 @@
+# iperf3 Client Configuration YAML
+command-name: "iperf3"
+description: "Run iperf3 as a client"
+keep-alive: false
+flags:
+  ## The "server" option specifies the server address to connect to.
+  - name: "server"
+    description: "Server address to connect to"
+    type: "string"
+    required: true
+    prefix: "-c"
+  # The "port" option specifies the server port to connect to.
+  - name: "port"
+    description: "Server port to connect to"
+    type: "string"
+    required: true
+    prefix: "-p"
+  # The "time" option specifies the duration of the test in seconds.
+  - name: "time"
+    description: "Duration of the test in seconds"
+    type: "string"
+    required: true
+    prefix: "-t"
+  # The "bandwidth" option specifies the target bandwidth for the test.
+  - name: "bandwidth"
+    description: "Target bandwidth for the test"
+    type: "string"
+    required: false
+    prefix: "-b"
+  # The "json" option specifies the output format as JSON.
+  - name: "json"
+    description: "Output format as JSON"
+    type: "boolean"
+    required: false
+    prefix: "-J"
